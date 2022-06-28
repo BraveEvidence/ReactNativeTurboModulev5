@@ -62,7 +62,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
     packages.add(new TurboReactPackage() {
       @Override
       public NativeModule getModule(String name, ReactApplicationContext reactContext) {
-        if (name.equals(Bike.NAME)) {
+        if (name.equals(Bike.name)) {
           return new Bike(reactContext);
         } else {
           return null;
@@ -74,10 +74,10 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
         return () -> {
           final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
           moduleInfos.put(
-                  Bike.NAME,
+                  Bike.name,
                   new ReactModuleInfo(
-                          Bike.NAME,
-                          Bike.NAME,
+                          Bike.name,
+                          Bike.name,
                           false, // canOverrideExistingModule
                           false, // needsEagerInit
                           true, // hasConstants
